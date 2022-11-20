@@ -43,19 +43,19 @@ jobs:
          RCLONE_CONFIG_PASS: ${{ secrets.RCLONE_CONFIG_PASS }}
         with:
           args: copyto wenxindiaolong-vst.epub gdrive:/古籍共享电子书计划/文心雕龍-豎排.epub
-      - name: Sync to Freemdict
+      - name: Sync to Onedrive
         uses: wei/rclone@v1
         env:
          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
          RCLONE_CONFIG_PASS: ${{ secrets.RCLONE_CONFIG_PASS }}
         with:
-          args: copyto --ignore-errors wenxindiaolong.epub freemdict:/古籍共享电子书计划/文心雕龍.epub
-      - name: Sync vst to Freemdict
+          args: copyto --ignore-errors wenxindiaolong.epub onedrive:/古籍共享电子书计划/文心雕龍.epub
+      - name: Sync vst to Onedrive
         uses: wei/rclone@v1
         env:
          RCLONE_CONF: ${{ secrets.RCLONE_CONF }}
          RCLONE_CONFIG_PASS: ${{ secrets.RCLONE_CONFIG_PASS }}
         with:
-          args: copyto --ignore-errors wenxindiaolong-vst.epub freemdict:/古籍共享电子书计划/文心雕龍-豎排.epub
+          args: copyto --ignore-errors wenxindiaolong-vst.epub onedrive:/古籍共享电子书计划/文心雕龍-豎排.epub
 
 
